@@ -2,7 +2,7 @@ using SimpleFeedReader;
 
 namespace RSSReader.Leitor;
 
-public class Leitor
+public class LeitorCrunchyroll : ILeitor
 {
     public async Task<IEnumerable<FeedItem>> LerAsync(string uri)
     {
@@ -10,7 +10,5 @@ public class Leitor
         IEnumerable<FeedItem> feed = await reader.RetrieveFeedAsync(uri);
            
         return feed;
-
-
     }
 }
